@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import App from './App.vue'
 import Contacts from './pages/Contacts.vue'
 import AddContact from './pages/AddContact.vue'
+import Login from './pages/Login.vue'
 import MyDirectives from './plugins/MyDirectives'
 
 Vue.config.productionTip = false
@@ -14,7 +15,8 @@ const routes = [
   { path: '/', redirect: '/contacts' },
   { path: '/contacts', component: Contacts, name: 'contacts' },
   { path: '/contacts/:id', component: Contacts, name: 'contact-details' },
-  { path: '/add-contact', component: AddContact, name: 'add-contact' }
+  { path: '/add-contact', component: AddContact, name: 'add-contact' },
+  { path: '/login', component: Login, name: 'login' }
 ]
 
 const router = new VueRouter({
