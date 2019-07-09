@@ -39,18 +39,6 @@
         </div>
       </div>
       <div class="form-group row">
-        <label for="number" class="col-4 col-form-label">Number</label>
-        <div class="col-8">
-          <div class="input-group">
-            <input id="number"
-                   name="number"
-                   type="tel"
-                   class="form-control here"
-                   v-model="contact.number">
-          </div>
-        </div>
-      </div>
-      <div class="form-group row">
         <div class="offset-4 col-8">
           <button name="submit" type="submit" class="btn btn-primary">Submit</button>
         </div>
@@ -68,8 +56,7 @@ export default {
       contact: {
         first_name: '',
         last_name: '',
-        email: '',
-        number: ''
+        email: ''
       },
       validationConfig: {
         validationRules: {
@@ -104,10 +91,12 @@ export default {
     },
 
     addContact () {
-      contacts.add(this.contact)
+      /* contacts.add(this.contact)
         .then(() => {
           this.$router.push('/contacts')
-        })
+        }) */
+
+      contacts.add(this.contact);
     }
   }
 }
