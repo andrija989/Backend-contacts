@@ -28,18 +28,16 @@ export default {
     }
   },
 
-  /* beforeRouteEnter (to, from, next) {
+  beforeRouteEnter (to, from, next) {
     contacts.getAll()
       .then((response) => {
           next((vm) => {
             vm.contacts = response.data
           })
       })
-  }, */
+  }, 
 
-  created() {
-    this.contacts = contacts.getAll()
-  },
+
 
   methods: {
     deleteContact (id) {

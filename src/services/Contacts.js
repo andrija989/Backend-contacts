@@ -3,23 +3,27 @@ import axios from 'axios'
 export default class Contacts {
   constructor () {
     this.contacts = []
+    axios.defaults.baseURL ='http://localhost:8000/api/'
   }
 
   getAll () {
-    return this.contacts
+    return axios.get('contacts')
   }
 
   add (contact) {
-    return this.contacts.push(contact)
+    return axios.post('contacts',contact)
   }
 
   remove (id) {
+    return axios.delete(`contacts/${id}`)
   }
 
   edit (contact) {
+    return axios.put(`contacts/${contact.id}`,contact)
   }
 
   get (id) {
+    return axios.get(`contacts/${id}`)
   }
 }
 

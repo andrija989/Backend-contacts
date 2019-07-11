@@ -91,10 +91,10 @@ export default {
     },
 
     addContact () {
-      /* contacts.add(this.contact)
+      contacts.add(this.contact)
         .then(() => {
           this.$router.push('/contacts')
-        }) */
+        }) 
 
       contacts.add(this.contact);
     }
