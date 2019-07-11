@@ -1,6 +1,11 @@
 import axios from 'axios'
 
 export default class AuthService {
+
+  constructor() {
+    this.setAxiosDefaultAuthorizationHeader()
+  }
+
   login(email, password) {
     return axios.post('http://localhost:8000/api/login', {
       email, password
